@@ -1,0 +1,99 @@
+
+body {
+  font-family: "BRoya";
+  font-size: 3vw;
+  line-height: 10px;
+  color: #a9a9a9;
+  background-color: #efefef;
+ 
+}
+
+div.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: auto;
+  
+}
+
+button {
+  font-family: "BRoya";
+  font-size: 2vw;
+  cursor: pointer;
+  color: #efefef;
+  background-color:#ff383f;
+  border:  #efefef 1px solid;
+  border-radius: 30%;
+  padding: 5px 10px;
+  margin-top: 240px;
+  text-decoration: none;
+  box-shadow: 0 5px 5px 0 #a9a9a9 ;
+  outline: none;
+  transition-duration: 5ms;
+
+}
+#btn:hover {
+  color: #ff383f;
+  background-color:#efefef;
+  border:  #ff383f 3px solid;
+  border-radius: 30%;
+  box-shadow: 0 2px 2px 0 #a9a9a9 ;
+ 
+
+}
+
+#coin {
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  top: 220px;
+ 
+}
+
+#coin div{ 
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 1px solid #a9a9a9;
+  border-radius: 50%;
+  position: absolute;
+  background-size: contain;
+  backface-visibility: hidden;
+  
+}
+#front {
+  background-image: url("images/head.jpg");
+  background-repeat: no-repeat;
+ 
+} 
+#back {
+  background-image: url("images/tail.jpg");
+  background-repeat: no-repeat;
+  transform: rotateY(-180deg);
+ 
+}
+.animateCoin{
+  animation-name: flipCoin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transition-property: transform;
+  transition-duration: 2s;
+  transform-style: preserve-3d;
+}
+
+
+@keyframes flipCoin {
+  0% {top:220px;}
+  50% {top: -120px;}
+  100% {top: 220px;}
+  
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(1080deg);
+  }
+}
