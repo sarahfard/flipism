@@ -27,13 +27,13 @@ function flipCoin(){
     }
     setTimeout(function(){
       if (hCounter > tCounter){
-        result.textContent = 'رو';
+        result.textContent = ': رو';
       }
       else if(hCounter < tCounter){
-        result.textContent = 'پشت';
+        result.textContent = ': پشت';
       }
       else{
-        result.textContent = 'مساوی';
+        result.textContent = ': مساوی';
       }
     }, 1900);
     coin.setAttribute('class', 'animateCoin');

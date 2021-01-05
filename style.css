@@ -1,9 +1,9 @@
 
 body {
   font-family: "BRoya";
-  font-size: 3vw;
-  line-height: 10px;
-  color: #a9a9a9;
+  font-size: 9vw;
+  line-height: 1%;
+  color: #696773;
   background-color: #efefef;
  
 }
@@ -20,36 +20,38 @@ div.container {
 
 button {
   font-family: "BRoya";
-  font-size: 2vw;
+  font-size: 7vw;
   cursor: pointer;
   color: #efefef;
   background-color:#ff383f;
   border:  #efefef 1px solid;
   border-radius: 30%;
-  padding: 5px 10px;
-  margin-top: 240px;
+  padding: 5px 30px;
+ margin-top: 240px;
+  
   text-decoration: none;
   box-shadow: 0 5px 5px 0 #a9a9a9 ;
   outline: none;
   transition-duration: 5ms;
 
 }
+
 #btn:hover {
   color: #ff383f;
   background-color:#efefef;
-  border:  #ff383f 3px solid;
+  border:  #ff383f 1px solid;
   border-radius: 30%;
   box-shadow: 0 2px 2px 0 #a9a9a9 ;
- 
 
 }
 
+
 #coin {
   position: relative;
-  width: 10vw;
-  height: 10vw;
+  width: 35vw;
+  height: 35vw;
   top: 220px;
- 
+
 }
 
 #coin div{ 
@@ -63,17 +65,20 @@ button {
   backface-visibility: hidden;
   
 }
+
 #front {
   background-image: url("images/head.jpg");
   background-repeat: no-repeat;
  
 } 
+
 #back {
   background-image: url("images/tail.jpg");
   background-repeat: no-repeat;
   transform: rotateY(-180deg);
  
 }
+
 .animateCoin{
   animation-name: flipCoin;
   animation-duration: 2s;
@@ -95,5 +100,44 @@ button {
   }
   to{
     transform: rotateX(1080deg);
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #coin {
+    width: 25vw;
+    height: 25vw;
+  }
+  body {
+    font-size: 7vw;
+  }
+  button {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #coin {
+    width: 20vw;
+    height: 20vw;
+  }
+  body {
+    font-size: 4vw;
+  }
+  button {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #coin {
+    width: 10vw;
+    height: 10vw;
+  }
+  body {
+    font-size: 3vw;
+  }
+  button {
+    font-size: 2vw;
   }
 }
